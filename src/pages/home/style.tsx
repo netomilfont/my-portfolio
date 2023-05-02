@@ -4,7 +4,7 @@ import { Button } from "@/styles/Buttons";
 import { css } from "@stitches/react";
 
 import meIlustration from "@/public/static/img/background/me-ilustration.svg";
-import backgroundImg from "@/public/static/img/background/header-bg.svg";
+import backgroundImg from "@/public/static/img/background/header-bg.png";
 
 import dots from "@/public/static/img/background/dots.svg";
 
@@ -13,7 +13,8 @@ export const Header = styled("header", {
   padding: "12rem 0 8rem 0",
   backgroundImage: `url(${backgroundImg})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
+  backgroundPosition: "87% center",
+  backgroundSize: "contain",
   backgroundAttachment: "fixed",
   borderBottom: "2px solid $grey5",
   "@tablet": {

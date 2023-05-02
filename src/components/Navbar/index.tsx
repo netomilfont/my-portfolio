@@ -8,6 +8,8 @@ import {
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
+  SpanLinks,
+  DivSpanAndButton,
 } from "./style";
 
 import { FaBars } from "react-icons/fa";
@@ -21,7 +23,6 @@ export interface MenuButtonOpen {
 }
 
 export const NavBar = (): JSX.Element => {
-
   const isWide = useMedia({ maxWidth: "991px" });
 
   document.title = userData.nameUser;
@@ -49,9 +50,7 @@ export const NavBar = (): JSX.Element => {
             </Button>
           )}
         </NavbarMobileArea>
-        <Flex>
-          {isWide ? open && <NavLinks /> : <NavLinks />}
-        </Flex>
+        <Flex>{isWide ? open && <NavLinks /> : <NavLinks />}</Flex>
       </Container>
     </NavbarWrapper>
   );
@@ -60,18 +59,30 @@ export const NavBar = (): JSX.Element => {
 export const NavLinks = (): JSX.Element => {
   return (
     <NavbarLinks>
-      <Button type="btLink" as="a" color="grey4" href={`#home`}>
-        Home
-      </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#projects`}>
-        Projects
-      </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#contact`}>
-        Contact
-      </Button>
-      <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
-        Social Media
-      </Button>
+      <DivSpanAndButton>
+        <Button type="btLink" as="a" color="grey4" href={`#home`}>
+          Home
+        </Button>
+        <SpanLinks></SpanLinks>
+      </DivSpanAndButton>
+      <DivSpanAndButton>
+        <Button type="btLink" as="a" color="grey4" href={`#projects`}>
+          Projects
+        </Button>
+        <SpanLinks></SpanLinks>
+      </DivSpanAndButton>
+      <DivSpanAndButton>
+        <Button type="btLink" as="a" color="grey4" href={`#contact`}>
+          Contact
+        </Button>
+        <SpanLinks></SpanLinks>
+      </DivSpanAndButton>
+      <DivSpanAndButton>
+        <Button type="btLink" as="a" color="grey4" href={`#social-media`}>
+          Social Media
+        </Button>
+        <SpanLinks></SpanLinks>
+      </DivSpanAndButton>
     </NavbarLinks>
   );
 };

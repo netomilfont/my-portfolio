@@ -53,3 +53,23 @@ export const NavbarMobileArea = styled("div", {
   display: "flex",
   justifyContent: "space-between",
 });
+
+export const DivSpanAndButton = styled("div", {
+  "&:hover span": {
+    width: "100%",
+    transition: "0.5s",
+  },
+});
+
+export const SpanLinks = styled("span", {
+  display: "block",
+  width: "0%",
+  height: "2px",
+  backgroundColor: "#ff99cc",
+  transition: "0.5s",
+
+  "&:hover": {
+    cursor: "pointer",
+    color: "#ff99cc",
+  },
+});
